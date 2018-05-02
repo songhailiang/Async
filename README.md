@@ -1,7 +1,9 @@
 # Async
 More easier to use GCD in Swift.
 
-This is heavily inspired by [Async](https://github.com/duemunk/Async)
+This is heavily inspired by [Async](https://github.com/duemunk/Async), a very simple, light but powerful project.
+
+I removed some of the features to make it more simple but enough to use, and rewrote the ```AsyncGroup``` part to make it more easier to support async operations.
 
 ## Simple to use: 
 ```
@@ -41,7 +43,7 @@ Async.main(after: 3) {
 ```
 
 ## Cancelable
-**Note: only when the block hasn't already begun running**
+**Note: only when the block hasn't already begun running that can be cancelled.**
 ```
 let job1 = Async.main {
     Logger.log("start to do some heavy jobs..", event: .debug)
@@ -87,4 +89,6 @@ group.finished { // will be called when all async jobs are done.
     Logger.log("all jobs are done.", event: .debug)
 }
 ```
+
+
 
